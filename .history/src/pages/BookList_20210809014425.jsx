@@ -7,7 +7,7 @@ export default function BookList() {
   useEffect(()=>{
     let bookService = new BookService()
     bookService.getBooks().then(result=>setBooks(result.data.data))
-  },[])
+  })
 
   return (
     <div>

@@ -7,7 +7,7 @@ export default function BookList() {
   useEffect(()=>{
     let bookService = new BookService()
     bookService.getBooks().then(result=>setBooks(result.data.data))
-  },[])
+  })
 
   return (
     <div>
@@ -23,12 +23,11 @@ export default function BookList() {
 
         <Table.Body>
           {books.map((book) => (
-            <Table.Row key={book.id}>
-              <Table.Cell>{book.bookName}</Table.Cell>
-              <Table.Cell>{book.authorName} 
-              &nbsp; {book.authorLastName}</Table.Cell>
-              <Table.Cell>{book.page}</Table.Cell>
-              <Table.Cell>{book.category}</Table.Cell>
+            <Table.Row>
+              <Table.Cell>b</Table.Cell>
+              <Table.Cell>Cell</Table.Cell>
+              <Table.Cell>Cell</Table.Cell>
+              <Table.Cell>Cell</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
